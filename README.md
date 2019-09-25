@@ -12,7 +12,7 @@ composer install
 php artisan key:generate
 ```
 
-configure .env with working credentials
+configure .env with working db credentials
 ```
 php artisan migrate
 ```
