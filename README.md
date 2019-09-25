@@ -9,6 +9,11 @@ encrypt decrypt db password using native php functions
 git clone git clone https://github.com/alexteh/avoid-db-credential-plain-text.git encrypt_psw
 cd encrypt_psw
 composer install
+php artisan key:generate
 ```
 
+1) configure .env with working credentials
+```
+php artisan migrate
+```
 ### Setup Encryption Password
