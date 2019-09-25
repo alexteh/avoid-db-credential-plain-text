@@ -48,11 +48,17 @@ DB_PASSWORD=<encrypted value>
 ```
 
 [b] at PROJECT_ROOT/config/database.php, replace entire 'password' line of code below code
+
+REPLACE VALUE FROM:
+```
+'password' => env('DB_PASSWORD', ''),
+```
+TO VALUE:
 ```
 'password' => openssl_decrypt(env('DB_PASSWORD'), 'aes-256-cbc', file_get_contents(env('DB_ENCRYPTION_KEY_PATH')), 0, base64_decode(base64_encode(env('DB_IV')))),
 ```
 
-5) localhost/05
+1) localhost/05
 - configure until see the message below
 ```
 "NEW DB Setup Connected, Good to Go!!"
